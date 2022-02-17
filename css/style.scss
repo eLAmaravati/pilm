@@ -1,0 +1,103 @@
+/* -------------------------------------------
+Project    : Movie List
+Description: Belajar API di WPU
+Author     : Langit Amaravati
+Author URI : https://www.langitamaravati.com
+Version    : v.1.0.0
+----------------------------------------------*/
+
+/* ----- Reset ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Variable ----- */
+$accentColor: HSL(0, 73%, 41%);
+$input-group-addon-padding-y: 20PX;
+
+/* ----- Global CSS----- */
+body {
+    max-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: $accentColor;
+
+    &:hover {
+        color: #333;
+    }
+}
+
+/* ----- Navigation & Header----- */
+.header-wrapper {
+    background-color: $accentColor;
+    background-image: url(../img/movies-1645014705994-2473.jpg);
+    // background-image: url(https://wallpapercave.com/wp/a7kNRmZ.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    span {
+        color: $accentColor;
+    }
+}
+
+/* ----- Search----- */
+.search-wrapper {
+    padding: 100px 0;
+}
+
+.site-title {
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 5px 5px 2px $accentColor;
+}
+
+#search-input {
+    flex: 3;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+#search-button {
+    flex: 1;
+}
+
+/* ----- Main----- */
+.main-wrapper {
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.movie-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.movie-poster {
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.see-detail {
+    color: $accentColor;
+    font-weight: 500;
+
+    &:hover {
+        color: #333;
+    }
+}

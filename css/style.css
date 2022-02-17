@@ -1,0 +1,96 @@
+/* -------------------------------------------
+Project    : Movie List
+Description: Belajar API di WPU
+Author     : Langit Amaravati
+Author URI : https://www.langitamaravati.com
+Version    : v.1.0.0
+----------------------------------------------*/
+/* ----- Reset ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- Variable ----- */
+/* ----- Global CSS----- */
+body {
+  max-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: HSL(0, 73%, 41%);
+}
+a:hover {
+  color: #333;
+}
+
+/* ----- Navigation & Header----- */
+.header-wrapper {
+  background-color: HSL(0, 73%, 41%);
+  background-image: url(../img/movies-1645014705994-2473.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.navbar-brand span {
+  color: HSL(0, 73%, 41%);
+}
+
+/* ----- Search----- */
+.search-wrapper {
+  padding: 100px 0;
+}
+
+.site-title {
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 5px 5px 2px HSL(0, 73%, 41%);
+}
+
+#search-input {
+  flex: 3;
+}
+#search-input:focus {
+  box-shadow: none;
+}
+
+#search-button {
+  flex: 1;
+}
+
+/* ----- Main----- */
+.main-wrapper {
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.movie-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.movie-poster {
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+
+.see-detail {
+  color: HSL(0, 73%, 41%);
+  font-weight: 500;
+}
+.see-detail:hover {
+  color: #333;
+}/*# sourceMappingURL=style.css.map */
