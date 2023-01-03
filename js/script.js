@@ -2,7 +2,7 @@ function searchMovie() {
 	$('#movie-list').html(`
 	
 	`);
-	
+
 	$.ajax({
 		url: 'https://www.omdbapi.com/',
 		type: 'get',
@@ -14,16 +14,16 @@ function searchMovie() {
 		success: function (result) {
 			if (result.Response == "True") {
 				let movies = result.Search;
-                
+
 				$.each(movies, function (i, data) {
 					$('#movie-list').append(`
 						<div class="col-md-3 mb-5">
 							<div class="card h-100">
 								<img src="`+ data.Poster + `" class="card-img-top movie-poster" alt="">
 								<div class="card-body text-center">
-									<h2 class="card-title movie-title">`+ data.Title +`</h2>
-									<p class="card-subtitle mb-2 text-muted">`+ data.Year +`</p>
-									<a href="#" class="card-link see-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="`+ data.imdbID +`">See Detail</a>
+									<h2 class="card-title movie-title">`+ data.Title + `</h2>
+									<p class="card-subtitle mb-2 text-muted">`+ data.Year + `</p>
+									<a href="#" class="card-link see-detail stretched-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="`+ data.imdbID + `">See Detail</a>
 								</div>
 							</div>			
 						</div>
@@ -32,23 +32,23 @@ function searchMovie() {
 
 				// Menghilangkan input di search bar
 				$('#search-input').val('');
-                    
-            }
-			
-						else {
-                $('#movie-list').html(`
+
+			}
+
+			else {
+				$('#movie-list').html(`
                 <div class="col">
-                <h2 class="text-center">`+ result.Error +`</h2>
+                <h2 class="text-center">`+ result.Error + `</h2>
                 </div>
                 `)
-            }
-        }
-    });
+			}
+		}
+	});
 }
 
 
 // Function film awal
-function indexMovie() {	
+function indexMovie() {
 	$.ajax({
 		url: 'https://www.omdbapi.com/',
 		type: 'get',
@@ -60,31 +60,31 @@ function indexMovie() {
 		},
 		success: function (result) {
 			if (result.Response == "True") {
-				let movies = result.Search;
-                
+				let movies = result.Search.slice(0, 8);
+
 				$.each(movies, function (i, data) {
 					$('#movie-list').append(`
 						<div class="col-md-3 mb-5">
 							<div class="card h-100">
 								<img src="`+ data.Poster + `" class="card-img-top movie-poster" alt="">
 								<div class="card-body text-center">
-									<h2 class="card-title movie-title">`+ data.Title +`</h2>
-									<p class="card-subtitle mb-2 text-muted">`+ data.Year +`</p>
-									<a href="#" class="card-link see-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="`+ data.imdbID +`">See Detail</a>
+									<h2 class="card-title movie-title">`+ data.Title + `</h2>
+									<p class="card-subtitle mb-2 text-muted">`+ data.Year + `</p>
+									<a href="#" class="card-link see-detail stretched-link" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="`+ data.imdbID + `">See Detail</a>
 								</div>
 							</div>			
 						</div>
-                    `);
+          `);
 				});
 
 				// Menghilangkan input di search bar
 				$('#search-input').val('');
-                    
-            }
-			
 
-        }
-    });
+			}
+
+
+		}
+	});
 }
 // Function film awal end
 
@@ -104,19 +104,19 @@ $('#search-input').on('keyup', function (e) {
 
 // Modal See Detail
 $('#movie-list').on('click', '.see-detail', function () {
-		$.ajax({
-			url: 'https://www.omdbapi.com/',
-			type: 'get',
-			dataType: 'json',
-			data: {
-				'apikey': 'f2128e56',
-				'i': $(this).data('id'),
-			},
+	$.ajax({
+		url: 'https://www.omdbapi.com/',
+		type: 'get',
+		dataType: 'json',
+		data: {
+			'apikey': 'f2128e56',
+			'i': $(this).data('id'),
+		},
 
-			success: function (movie) {
-				if (movie.Response === "True") {
-					
-					$('.modal-body').html(`
+		success: function (movie) {
+			if (movie.Response === "True") {
+
+				$('.modal-body').html(`
 				<div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
@@ -137,7 +137,7 @@ $('#movie-list').on('click', '.see-detail', function () {
     </div>
 				`);
 
-				}
 			}
-		});
+		}
 	});
+});

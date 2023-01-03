@@ -3,7 +3,7 @@ Project    : Movie List
 Description: Belajar API di WPU
 Author     : Langit Amaravati
 Author URI : https://www.langitamaravati.com
-Version    : v.1.0.0
+Version    : v.1.2.0
 ----------------------------------------------*/
 /* ----- Reset ----- */
 * {
@@ -29,11 +29,8 @@ a:hover {
 
 /* ----- Navigation & Header----- */
 .header-wrapper {
-  background-color: HSL(0, 73%, 41%);
-  background-image: url(../img/movies-1645014705994-2473.jpg);
-  background-repeat: no-repeat;
+  background: HSL(0, 73%, 41%) url("../img/header.webp") no-repeat center top;
   background-size: cover;
-  background-position: center top;
   background-attachment: fixed;
   background-blend-mode: multiply;
 }
@@ -81,10 +78,8 @@ a:hover {
 
 .movie-poster {
   height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
 }
 
 .see-detail {
@@ -93,4 +88,6 @@ a:hover {
 }
 .see-detail:hover {
   color: #333;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

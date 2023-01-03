@@ -1,33 +1,18 @@
 # PILM - Praktik Membuat API
 
-Praktik membuat API di channel Youtube Web Programming Unpas.
+Praktik membuat web pencarian film di channel Youtube Web Programming Unpas. Data film diambil public API. Menggunakan method Ajax.
 
-## Daftar Isi
+![screenshot](./img/screenshot.webp)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-- [Author](#author)
+## Links
+- Live website: [Pilm](https://)
+- Source code: [Github repository](https://github.com/eLAmaravati/pilm)
 
-## Overview
+### Tech Stack
 
-Ini kali pertama saya praktik membuat API
-
-### Links
-
-## My Process
-
-### Built with
-
-- [OMDb API](https://www.omdbapi.com/)
+- Public API: [OMDb API](https://www.omdbapi.com/)
 - Bootstrap
 - HTML5
 - jQuery
 - Ajax
 - Postman
-
-### What I learned

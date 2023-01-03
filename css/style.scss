@@ -3,7 +3,7 @@ Project    : Movie List
 Description: Belajar API di WPU
 Author     : Langit Amaravati
 Author URI : https://www.langitamaravati.com
-Version    : v.1.0.0
+Version    : v.1.2.0
 ----------------------------------------------*/
 
 /* ----- Reset ----- */
@@ -34,12 +34,8 @@ a {
 
 /* ----- Navigation & Header----- */
 .header-wrapper {
-    background-color: $accentColor;
-    background-image: url(../img/movies-1645014705994-2473.jpg);
-    // background-image: url(https://wallpapercave.com/wp/a7kNRmZ.jpg);
-    background-repeat: no-repeat;
+    background: $accentColor url("../img/header.webp") no-repeat center top;
     background-size: cover;
-    background-position: center top;
     background-attachment: fixed;
     background-blend-mode: multiply;
 }
