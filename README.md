@@ -1,11 +1,11 @@
-# PILM - Praktik Membuat API
+# PILM - Praktik Membuat Web dari Public API
 
-Praktik membuat web pencarian film di channel Youtube Web Programming Unpas. Data film diambil public API. Menggunakan method Ajax.
+Praktik membuat web pencarian film di channel Youtube Web Programming Unpas. Data film diambil dari public API menggunakan method Ajax.
 
 ![screenshot](./img/screenshot.webp)
 
 ## Links
-- Live website: [Pilm](https://)
+- Live website: [Pilm](https://elamaravati.github.io/pilm/)
 - Source code: [Github repository](https://github.com/eLAmaravati/pilm)
 
 ### Tech Stack

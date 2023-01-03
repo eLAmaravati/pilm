@@ -27,7 +27,7 @@ function searchMovie() {
 								</div>
 							</div>			
 						</div>
-                    `);
+          `);
 				});
 
 				// Menghilangkan input di search bar
@@ -37,8 +37,8 @@ function searchMovie() {
 
 			else {
 				$('#movie-list').html(`
-                <div class="col">
-                <h2 class="text-center">`+ result.Error + `</h2>
+                <div class = "col">
+                <h2  class = "text-center">`+ result.Error + `</h2>
                 </div>
                 `)
 			}
@@ -79,10 +79,7 @@ function indexMovie() {
 
 				// Menghilangkan input di search bar
 				$('#search-input').val('');
-
 			}
-
-
 		}
 	});
 }
@@ -117,26 +114,25 @@ $('#movie-list').on('click', '.see-detail', function () {
 			if (movie.Response === "True") {
 
 				$('.modal-body').html(`
-				<div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="`+ movie.Poster + `" class="img-fluid">
-            </div>
-    
-            <div class="col-md-8">
-                <ul class="list-group">
-                    <li class="list-group-item fw-bold fs-4">`+ movie.Title + `</li>
-                    <li class="list-group-item"><span class="fw-bold">Released:</span> `+ movie.Released + `</li>
-					<li class="list-group-item"><span class="fw-bold">Genre:</span> `+ movie.Genre + `</li>
-					<li class="list-group-item"><span class="fw-bold">Actors:</span> `+ movie.Actors + `</li>
-					<li class="list-group-item"><span class="fw-bold">Director:</span> `+ movie.Director + `</li>
-					<li class="list-group-item"><span class="fw-bold">Synopsis:</span> `+ movie.Plot + `</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+				<div class = "container-fluid">
+					<div class = "row">
+						<div class = "col-md-4">
+							<img src   = "`+ movie.Poster + `" class = "img-fluid">
+						</div>
+			
+						<div class = "col-md-8">
+							<ul  class = "list-group">
+								<li  class = "list-group-item fw-bold fs-4">`+ movie.Title + `</li>
+								<li  class = "list-group-item"><span class = "fw-bold">Released:</span> `+ movie.Released + `</li>
+								<li  class = "list-group-item"><span class = "fw-bold">Genre:</span> `+ movie.Genre + `</li>
+								<li  class = "list-group-item"><span class = "fw-bold">Actors:</span> `+ movie.Actors + `</li>
+								<li  class = "list-group-item"><span class = "fw-bold">Director:</span> `+ movie.Director + `</li>
+								<li  class = "list-group-item"><span class = "fw-bold">Synopsis:</span> `+ movie.Plot + `</li>
+							</ul>
+						</div>
+					</div>
+    		</div>
 				`);
-
 			}
 		}
 	});
